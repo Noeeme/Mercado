@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "8535464e-cc43-4d6a-9a9e-a2adf4e70e38",
+		"name": "sprint5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21670870"
+	},
+	"item": [
+		{
+			"name": "Cadastro_Pedidos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "co",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"cpf\": \"893.475.166-51\",\r\n        \"itens\": [\r\n            {\r\n                \"id\": 1,\r\n                \"nome\": \"arroz\",\r\n                \"dataCriacao\": null,\r\n                \"dataValidade\": \"2022-08-25 16:40:20\",\r\n                \"valor\": 24.0,\r\n                \"descricao\": null,\r\n                \"ofertas\": [\r\n                    {\r\n                        \"id\": 1,\r\n                        \"nome\": \"super friday\",\r\n                        \"dataCriacao\": null,\r\n                        \"dataValidade\": \"2022-08-25 16:40:20\",\r\n                        \"desconto\": 5.0,\r\n                        \"descricao\": \"cinquenta por cento de desconto\"\r\n                    }\r\n                ]\r\n            }\r\n        ],\r\n        \"total\": 8.0\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pedido",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pedido"
+					],
+					"query": [
+						{
+							"key": "useTimezone",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "serverTimezone",
+							"value": "America/Sao_Paulo",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar_Pedidos_Cadastrados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pedido",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pedido"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar_Pedido_Especifico",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pedido/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pedido",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar_Pedido",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pedido/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pedido",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar_Valor_Do_Item",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/item/1/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"item",
+						"1",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar_Total_Do_Pedido",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pedido/1/30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pedido",
+						"1",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post_sem_oferta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"cpf\": \"893.475.166-51\",\r\n        \"itens\": [\r\n            {\r\n                \"id\": 1,\r\n                \"nome\": \"arroz\",\r\n                \"dataCriacao\": null,\r\n                \"dataValidade\": \"2022-08-25 16:40:20\",\r\n                \"valor\": 24.0,\r\n                \"descricao\": null,\r\n                \"ofertas\": []\r\n            }\r\n        ],\r\n        \"total\": 8.0\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pedido",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pedido"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
