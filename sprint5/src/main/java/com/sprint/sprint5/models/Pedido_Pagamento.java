@@ -18,8 +18,8 @@ public class Pedido_Pagamento {
     private Long numCartao;
     private Long codSeguranca;
     private Marca marca;
-    private int anoValidade;
-    private int mesValidade;
+    private String anoValidade;
+    private String mesValidade;
     private String moeda;
     private double valor;
 
