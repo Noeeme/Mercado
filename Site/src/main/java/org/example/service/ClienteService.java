@@ -2,7 +2,7 @@ package org.example.service;
 
 import lombok.RequiredArgsConstructor;
 import org.example.dto.request.ClienteRequest;
-import org.example.dto.response.ClientResponse;
+import org.example.dto.response.ClienteResponse;
 import org.example.entities.Cliente;
 import org.example.repositories.ClienteRepository;
 import org.modelmapper.ModelMapper;
@@ -19,20 +19,20 @@ public class ClienteService {
     private final ClienteRepository repository;
     private final ModelMapper modelMapper;
 
-    public ClientResponse salvar(ClienteRequest clienteRequest){
+    public ClienteResponse salvar(ClienteRequest clienteRequest){
         if(repository.existsById(Long.valueOf(clienteRequest.getCpf()))){
             throw new ResponseStatusException(HttpStatus.IM_USED);
         }
         Cliente cliente = modelMapper.map(clienteRequest, Cliente.class);
         Cliente salvo = repository.save(cliente);
 
-        return modelMapper.map(salvo, ClientResponse.class);
+        return modelMapper.map(salvo, ClienteResponse.class);
     }
 
-    public List<ClientResponse> listar(){
+    public List<ClienteResponse> listar(){
         List<Cliente> clientes = repository.findAll();
-        List<ClientResponse> responses = clientes.stream().map(cliente ->
-                modelMapper.map(cliente, ClientResponse.class)).collect(Collectors.toList());
+        List<ClienteResponse> responses = clientes.stream().map(cliente ->
+                modelMapper.map(cliente, ClienteResponse.class)).collect(Collectors.toList());
 
         return responses;
     }

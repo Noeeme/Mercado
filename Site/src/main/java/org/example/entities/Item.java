@@ -1,11 +1,15 @@
 package org.example.entities;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = "skuid"))
 public class Item {
     @Id

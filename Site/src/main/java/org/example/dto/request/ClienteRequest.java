@@ -18,7 +18,7 @@ public class ClienteRequest {
 
     @CPF
     @NotBlank
-    private String cpf;
+    private Long cpf;
     @NotBlank
     private String nome;
 }
