@@ -5,8 +5,8 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class ClientResponse {
-    private String cpf;
+public class ClienteResponse {
+    private Long cpf;
     private String nome;
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     private LocalDateTime dataCriacao;

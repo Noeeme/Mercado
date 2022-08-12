@@ -1,17 +1,21 @@
 package org.example.entities;
 
-import lombok.Data;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@Entity
 public class Cliente {
 
     @Id
-    private String cpf;
+    private Long cpf;
     private String nome;
     @CreationTimestamp
     private LocalDateTime dataCriacao;

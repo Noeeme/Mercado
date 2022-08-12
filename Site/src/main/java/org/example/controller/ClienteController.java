@@ -2,7 +2,7 @@ package org.example.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.example.dto.request.ClienteRequest;
-import org.example.dto.response.ClientResponse;
+import org.example.dto.response.ClienteResponse;
 import org.example.service.ClienteService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,14 +19,14 @@ public class ClienteController {
 
     @PostMapping
     @Transactional
-    public ResponseEntity<ClientResponse> salvaCliente(@Valid @RequestBody ClienteRequest clienteRequest){
-        ClientResponse clientResponse = clienteService.salvar(clienteRequest);
+    public ResponseEntity<ClienteResponse> salvaCliente(@Valid @RequestBody ClienteRequest clienteRequest){
+        ClienteResponse clientResponse = clienteService.salvar(clienteRequest);
         return  ResponseEntity.ok(clientResponse);
     }
 
     @GetMapping
-    public ResponseEntity<List<ClientResponse>> listarClientes(){
-        List<ClientResponse> cliente = clienteService.listar();
+    public ResponseEntity<List<ClienteResponse>> listarClientes(){
+        List<ClienteResponse> cliente = clienteService.listar();
         return ResponseEntity.ok(cliente);
     }
 
