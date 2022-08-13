@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
--Cadastrar pedidos, com seus itens e suas ofertas(se existir).
+-Cadastrar pedidos, com seus itens e suas ofertas(se existir), fazendo comunicação com o microserviço de pagamentos através de uma fila.
 
 <h4 align="center"> 
 	🚀 Em construção...
