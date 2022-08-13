@@ -14,7 +14,6 @@
 - [x] Fila de pagamentos + cadastro no banco de dados
 - [x] Fila do Banco
 - [x] Serviço do site
-- [] Rota do site para checkout
 
 ### Pré-requisitos
 
