@@ -5,13 +5,16 @@
 -Cadastrar pedidos, com seus itens e suas ofertas(se existir).
 
 <h4 align="center"> 
-	🚀 Finalizado...
+	🚀 Em construção...
 </h4>
 
 ### Features
 
 - [x] Cadastro de pedidos + itens + ofertas
 - [x] Fila de pagamentos + cadastro no banco de dados
+- [x] Fila do Banco
+- [x] Serviço do site
+- [] Rota do site para checkout
 
 ### Pré-requisitos
 
